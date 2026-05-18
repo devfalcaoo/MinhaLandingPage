@@ -1,0 +1,505 @@
+:root{
+
+  --primary: #082f7c;
+  --primary-light: #3c6dc5;
+  --secondary: #dfe8ff;
+  --white: #ffffff;
+  --text: #1d1d1d;
+  --gray: #707070;
+
+  --shadow:
+  0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Montserrat', sans-serif;
+  color:var(--text);
+  background:#f7f9ff;
+  overflow-x:hidden;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* HEADER */
+
+.header{
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1000;
+  background:rgba(8,47,124,0.95);
+  backdrop-filter:blur(10px);
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 0;
+}
+
+.logo img{
+  width:35px;
+}
+
+.menu{
+  display:flex;
+  list-style:none;
+  gap:35px;
+}
+
+.menu a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.menu a:hover{
+  color:#c7d7ff;
+}
+
+.btn-nav{
+  background:white;
+  color:var(--primary);
+  padding:12px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-nav:hover{
+  transform:translateY(-2px);
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  background:linear-gradient(
+    135deg,
+    #082f7c,
+    #0c3f9e
+  );
+  padding-top:180px;
+  padding-bottom:120px;
+  overflow:hidden;
+}
+
+.hero-content{
+  display:grid;
+  grid-template-columns:1fr 400px;
+  gap:60px;
+  align-items:center;
+}
+
+.tag{
+  display:inline-block;
+  background:rgba(255,255,255,0.12);
+  color:white;
+  padding:10px 18px;
+  border-radius:50px;
+  margin-bottom:25px;
+  font-size:14px;
+}
+
+.hero-text h1{
+  font-size:4rem;
+  line-height:1.1;
+  color:white;
+  margin-bottom:25px;
+  font-family:'Cormorant Garamond', serif;
+}
+
+.hero-text p{
+  color:#e4ebff;
+  font-size:18px;
+  line-height:1.8;
+  margin-bottom:35px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn-primary{
+  background:white;
+  color:var(--primary);
+  padding:16px 28px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+  transition:0.3s;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+}
+
+.btn-secondary{
+  border:1px solid rgba(255,255,255,0.4);
+  color:white;
+  padding:16px 28px;
+  border-radius:50px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn-secondary:hover{
+  background:rgba(255,255,255,0.1);
+}
+
+.hero-card{
+  position:relative;
+}
+
+.hero-info{
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.2);
+  backdrop-filter:blur(15px);
+  border-radius:30px;
+  padding:40px;
+  color:white;
+  position:relative;
+  z-index:2;
+}
+
+.hero-info h3{
+  font-size:28px;
+  margin-bottom:30px;
+  font-family:'Cormorant Garamond', serif;
+}
+
+.info-item{
+  margin-bottom:20px;
+  line-height:1.7;
+}
+
+.card-glow{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:#8cb2ff;
+  filter:blur(80px);
+  opacity:0.2;
+}
+
+/* WAVES */
+
+.wave-top,
+.wave-bottom{
+  position:absolute;
+  width:100%;
+  height:120px;
+  background:#f7f9ff;
+}
+
+.wave-top{
+  top:0;
+  border-radius:0 0 50% 50%;
+}
+
+.wave-bottom{
+  bottom:-60px;
+  border-radius:50% 50% 0 0;
+}
+
+/* SOBRE */
+
+.sobre{
+  padding:120px 0;
+}
+
+.sobre-grid{
+  display:grid;
+  grid-template-columns:400px 1fr;
+  gap:80px;
+  align-items:center;
+}
+
+.image-box{
+  background:linear-gradient(
+    135deg,
+    #082f7c,
+    #3c6dc5
+  );
+  padding:40px;
+  border-radius:40px;
+  box-shadow:var(--shadow);
+}
+
+.image-box img{
+  width:100%;
+}
+
+.section-tag{
+  color:var(--primary-light);
+  font-weight:700;
+  letter-spacing:2px;
+  font-size:13px;
+}
+
+.sobre-content h2,
+.section-title h2,
+.empresa-text h2{
+  font-size:3rem;
+  margin:20px 0;
+  color:var(--primary);
+  font-family:'Cormorant Garamond', serif;
+  line-height:1.2;
+}
+
+.sobre-content p,
+.section-title p,
+.empresa-text p{
+  color:var(--gray);
+  line-height:1.9;
+  margin-bottom:20px;
+}
+
+.sobre-cards{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.mini-card{
+  background:white;
+  padding:25px;
+  border-radius:25px;
+  box-shadow:var(--shadow);
+}
+
+.mini-card h4{
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+/* SERVIÇOS */
+
+.servicos{
+  padding:120px 0;
+  background:#eef4ff;
+}
+
+.section-title{
+  text-align:center;
+  max-width:700px;
+  margin:auto;
+  margin-bottom:70px;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+.service-card{
+  background:white;
+  padding:40px 30px;
+  border-radius:30px;
+  box-shadow:var(--shadow);
+  transition:0.3s;
+}
+
+.service-card:hover{
+  transform:translateY(-10px);
+}
+
+.icon{
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+.service-card h3{
+  color:var(--primary);
+  margin-bottom:15px;
+}
+
+.service-card p{
+  line-height:1.8;
+  color:var(--gray);
+}
+
+/* EMPRESA */
+
+.empresa{
+  padding:120px 0;
+}
+
+.empresa-content{
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:60px;
+  align-items:center;
+}
+
+.empresa-text ul{
+  margin-top:30px;
+  list-style:none;
+}
+
+.empresa-text li{
+  margin-bottom:15px;
+  color:var(--gray);
+}
+
+.empresa-card{
+  background:linear-gradient(
+    135deg,
+    #082f7c,
+    #3c6dc5
+  );
+  color:white;
+  padding:50px;
+  border-radius:40px;
+  box-shadow:var(--shadow);
+}
+
+.empresa-card h3{
+  font-size:32px;
+  margin-bottom:20px;
+  font-family:'Cormorant Garamond', serif;
+}
+
+.empresa-card p{
+  line-height:1.8;
+  margin-bottom:30px;
+}
+
+.empresa-card a{
+  display:inline-block;
+  background:white;
+  color:var(--primary);
+  padding:14px 24px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* CONTATO */
+
+.contato{
+  padding: 50px;
+  background:#eef4ff;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.contact-card{
+  background:white;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow:var(--shadow);
+  text-align: center;
+}
+
+.contact-card h3{
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+.contact-card p{
+  line-height:1.8;
+  color:var(--gray);
+}
+
+/* FOOTER */
+
+.footer{
+  background:#082f7c;
+  padding:40px 0;
+}
+
+.footer-content{
+  text-align:center;
+}
+
+.footer p{
+  color:#d7e3ff;
+}
+
+/* WHATSAPP */
+
+.whatsapp-button{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:65px;
+  height:65px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:28px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  z-index:999;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:1100px){
+
+  .hero-content,
+  .sobre-grid,
+  .empresa-content,
+  .services-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .sobre-cards{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .menu{
+    display:none;
+  }
+
+  .hero-text h1{
+    font-size:3rem;
+  }
+
+  .sobre-content h2,
+  .section-title h2,
+  .empresa-text h2{
+    font-size:2.3rem;
+  }
+
+  .btn-nav{
+    display:none;
+  }
+
+}

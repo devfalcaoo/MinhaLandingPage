@@ -1,5 +1,5 @@
 /* =========================
-ARQUIVO: script.js
+EFEITO DE SCROLL NO HEADER
 ========================= */
 
 window.addEventListener("scroll", () => {
@@ -33,7 +33,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 /* =========================================
-ADICIONE NO FINAL DO script.js
+MENU HAMBURGUER
 ========================================= */
 
 const hamburger = document.getElementById("hamburger");

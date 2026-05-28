@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root{
 
   --primary: #082f7c;
@@ -13,6 +15,7 @@
 }
 
 *{
+  font-family: 'Montserrat', sans-serif;
   margin:0;
   padding:0;
   box-sizing:border-box;
@@ -23,7 +26,6 @@ html{
 }
 
 body{
-  font-family:'Montserrat', sans-serif;
   color:var(--text);
   background:#f7f9ff;
   overflow-x:hidden;
@@ -187,7 +189,6 @@ body{
 .hero-info h3{
   font-size:28px;
   margin-bottom:30px;
-  font-family:'Cormorant Garamond', serif;
 }
 
 .info-item{
@@ -235,7 +236,6 @@ body{
   font-size:3rem;
   margin:20px 0;
   color:var(--primary);
-  font-family:'Cormorant Garamond', serif;
   line-height:1.2;
 }
 
@@ -351,7 +351,6 @@ body{
 .empresa-card h3{
   font-size:32px;
   margin-bottom:20px;
-  font-family:'Cormorant Garamond', serif;
 }
 
 .empresa-card p{
